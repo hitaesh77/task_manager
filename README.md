@@ -3,11 +3,11 @@ Overview
 
 The Task Manager App is a simple and intuitive React Native application for managing tasks. Users can add tasks, mark them as completed, and remove them when they're done. The app is designed with a clean and minimalistic UI.
 
-Setup and Installation:
-Ensure you have the following installed:
+Setup and Installation -> Ensure you have the following installed:
 - Node.js
 - npm or yarn
 - Expo CLI (for running the app)
+- Just clone this repository, install the necessary dependancies by running npm install, then run expo
 
 To Test App with Expo Go App on IOS:
 - npx expo start
