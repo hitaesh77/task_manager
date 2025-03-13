@@ -15,10 +15,15 @@ Ensure you have the following installed:
 - Expo CLI (for running the app)
 
 To Test App with Expo Go App on IOS:
+
 npx expo start
+
 Use the QR code in the Expo DevTools to run the app on your physical device, or use an Android/iOS emulator.
 
 Usage
+
 Add a task: Type in the input box at the bottom and press the "+" button.
+
 Complete a task: Tap the square checkbox to mark a task as done.
+
 Delete a task: Tap the small circle on the right to remove a task
