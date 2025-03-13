@@ -1,14 +1,19 @@
 import React from 'react';
-import { View, Text, StyleSheet, Touchable, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Task = (props) => { 
+const Task = ({ text, completed, onToggleComplete, onDelete }) => { 
   return (
     <View style={styles.item}>
         <View style={styles.itemLeft}>
-            <TouchableOpacity style={styles.square}></TouchableOpacity>
-            <Text style={styles.itemText}>{props.text}</Text>
+            {/* <TouchableOpacity style={styles.square}></TouchableOpacity> */}
+            {/* <Text style={styles.itemText}>{props.text}</Text> */}
+            <TouchableOpacity style={[styles.square, completed && styles.checked]} onPress={onToggleComplete} />
+            <Text style={[styles.itemText, completed && styles.strikethrough]}>{text}</Text>
         </View>
-        <View style={styles.circular}></View>
+        <TouchableOpacity onPress={onDelete}>
+            <View style={styles.circular} />
+        </TouchableOpacity>
+        {/* <View style={styles.circular}></View> */}
     </View>
   );
 }
@@ -38,6 +43,7 @@ const styles = StyleSheet.create({
     },
     itemText: {
         maxWidth: '80%',
+        color: '#252422'
     },
     circular: {
         width: 12,
@@ -45,6 +51,13 @@ const styles = StyleSheet.create({
         borderColor: '#eb5e28',
         borderWidth: 2,
         borderRadius: 5,
+    },
+    strikethrough: {
+        textDecorationLine: 'line-through',
+        color: '#888',
+    },
+    checked: {
+        backgroundColor: '#4caf50',
     },
 });
 
