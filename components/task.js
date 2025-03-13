@@ -5,15 +5,12 @@ const Task = ({ text, completed, onToggleComplete, onDelete }) => {
   return (
     <View style={styles.item}>
         <View style={styles.itemLeft}>
-            {/* <TouchableOpacity style={styles.square}></TouchableOpacity> */}
-            {/* <Text style={styles.itemText}>{props.text}</Text> */}
             <TouchableOpacity style={[styles.square, completed && styles.checked]} onPress={onToggleComplete} />
             <Text style={[styles.itemText, completed && styles.strikethrough]}>{text}</Text>
         </View>
         <TouchableOpacity onPress={onDelete}>
             <View style={styles.circular} />
         </TouchableOpacity>
-        {/* <View style={styles.circular}></View> */}
     </View>
   );
 }
